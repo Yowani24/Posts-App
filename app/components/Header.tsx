@@ -29,7 +29,7 @@ const Header = ({ headerTitleProps }: { headerTitleProps: string }) => {
           {session?.user?.name}
         </span>
         {session?.user?.image && (
-          <div className="min-w-7 h-7 bg-gtay-100 rounded-full border-2 border-white shadow-md overflow-hidden">
+          <div className="min-w-7 min-h-7 bg-gtay-100 rounded-full border-2 border-white shadow-md overflow-hidden">
             <Image
               src={session?.user?.image ?? ""}
               layout="fixed"
