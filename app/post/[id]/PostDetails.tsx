@@ -17,7 +17,7 @@ const PostDetails = ({ id }: { id: string }) => {
   });
 
   if (isLoading) return <LoadingComponent />;
-  if (error) return <p>Alguma Inconsistência ocorreu: {error.message}</p>;
+  if (error) return <p>Alguma Inconsistência ocorreu.: {error.message}</p>;
 
   return (
     <section>
