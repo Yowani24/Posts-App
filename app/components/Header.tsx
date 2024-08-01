@@ -19,6 +19,7 @@ const Header = ({ headerTitleProps }: { headerTitleProps: string }) => {
 
     fetchSession();
   }, []);
+
   return (
     <div className="flex items-center justify-between w-full h-16 bg-[#6aa1d85e] p-4">
       <h1 className="text-gray-600 font-bold">{headerTitleProps}</h1>
@@ -28,7 +29,7 @@ const Header = ({ headerTitleProps }: { headerTitleProps: string }) => {
           {session?.user?.name}
         </span>
         {session?.user?.image && (
-          <div className="w-7 h-7 bg-gtay-100 rounded-full border-2 border-white shadow-md overflow-hidden">
+          <div className="min-w-7 h-7 bg-gtay-100 rounded-full border-2 border-white shadow-md overflow-hidden">
             <Image
               src={session?.user?.image ?? ""}
               layout="fixed"
