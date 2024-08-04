@@ -27,7 +27,7 @@ const LoginForm = ({}) => {
         <div className="flex flex-col space-y-1">
           <label className="text-sm text-gray-500">Email</label>
           <input
-            className="p-2 rounded-md text-gray-500"
+            className="p-2 rounded-md text-gray-500 outline-none border-none bg-[#2e55a81c]"
             type="email"
             name="email"
             placeholder="Email"
@@ -38,7 +38,7 @@ const LoginForm = ({}) => {
         <div className="flex flex-col space-y-1 mt-4">
           <label className="text-sm text-gray-500">Senha</label>
           <input
-            className="p-2 rounded-md text-gray-500"
+            className="p-2 rounded-md text-gray-500 outline-none border-none bg-[#2e55a81c]"
             type="password"
             name="password"
             placeholder="Password"
