@@ -17,8 +17,19 @@ const LoginPage = () => {
     fetchSession();
   }, [router]);
   return (
-    <div className="flex items-center justify-center h-screen p-4">
-      <LoginForm />
+    <div
+      className="w-full h-screen"
+      style={{
+        backgroundImage: `url(${"/login_bg.png"})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundColor: "#ffffff",
+      }}
+    >
+      <div className="backdrop-blur-md bg-white/30 w-full h-screen p-4 rounded-xl flex items-center justify-center">
+        <LoginForm />
+      </div>
     </div>
   );
 };
