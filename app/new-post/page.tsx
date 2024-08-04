@@ -2,7 +2,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import ButtonComponent from "../components/buttons/ButtonComponent";
+import ButtonComponent from "../../components/buttons/ButtonComponent";
 import { useMutation } from "@tanstack/react-query";
 
 interface FormValues {

@@ -1,10 +1,10 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
-import PostCard from "./components/Posts/PostCard";
-import { PostType } from "./components/Posts/PostTypes";
-import LoadingComponent from "./components/LoadingComponent";
+import PostCard from "../components/Posts/PostCard";
+import { PostType } from "../components/Posts/PostTypes";
+import LoadingComponent from "../components/LoadingComponent";
 import Link from "next/link";
-import Header from "./components/Header";
+import Header from "../components/Header";
 
 async function getPosts(): Promise<PostType[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
