@@ -1,5 +1,22 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import usersDb from "../../../../usersDb.json";
+
+type Users = {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+};
+
+// type Credentials = {
+//   email: string;
+//   password: string;
+// };
+
+const users: Users[] = usersDb as Users[];
+
+const allUsersEmails = users?.map((user) => user.email);
 
 const handler = NextAuth({
   pages: {
@@ -17,15 +34,15 @@ const handler = NextAuth({
           return null;
         }
 
-        if (
-          credentials.email === "joao@teste.com" &&
-          credentials.password === "123456"
-        ) {
-          return {
-            id: "1",
-            name: "João",
-            email: "joao@teste.com",
-          };
+        const userExists = allUsersEmails.includes(credentials.email);
+
+        if (userExists && credentials.password === "123456") {
+          const userData = users.find(
+            (user) => user.email === credentials.email
+          );
+          if (userData) {
+            return userData;
+          }
         }
         return null;
       },

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "role": "admin"
+  },
+  {
+    "id": "2",
+    "name": "Bob Smith",
+    "email": "bob.smith@example.com",
+    "role": "editor"
+  },
+  {
+    "id": "3",
+    "name": "Carol Davis",
+    "email": "carol.davis@example.com",
+    "role": "contributor"
+  },
+  {
+    "id": "4",
+    "name": "David Brown",
+    "email": "david.brown@example.com",
+    "role": "subscriber"
+  }
+]
